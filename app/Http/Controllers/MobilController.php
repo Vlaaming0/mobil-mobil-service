@@ -15,9 +15,9 @@ class MobilController extends Controller
     }
 
     // Tambahkan method show() untuk “GET /mobils/{id}”
-    public function show($id)
+    public function show($mobil_id)
     {
-        $mobil = Mobil::find($id);
+        $mobil = Mobil::find($mobil_id);
         if (! $mobil) {
             return response()->json(['message' => 'Not Found'], 404);
         }
@@ -52,9 +52,9 @@ class MobilController extends Controller
         return response()->json($mobil, 201);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $mobil_id)
     {
-        $mobil = Mobil::find($id);
+        $mobil = Mobil::find($mobil_id);
         if (! $mobil) {
             return response()->json(['message' => 'Not Found'], 404);
         }
@@ -91,9 +91,9 @@ class MobilController extends Controller
         return response()->json($mobil);
     }
 
-    public function destroy($id)
+    public function destroy($mobil_id)
     {
-        $mobil = Mobil::find($id);
+        $mobil = Mobil::find($mobil_id);
         if (! $mobil) {
             return response()->json(['message' => 'Not Found'], 404);
         }
