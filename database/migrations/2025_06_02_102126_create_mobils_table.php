@@ -8,10 +8,10 @@ class CreateMobilsTable extends Migration
     public function up()
     {
         Schema::create('mobils', function (Blueprint $table) {
-            $table->id();
+            $table->mobil_id();
             $table->string('nama');
             $table->string('merk');
-            $table->unsignedBigInteger('harga');
+            $table->unsignedBigInteger('amount');
             $table->timestamps();
         });
     }
