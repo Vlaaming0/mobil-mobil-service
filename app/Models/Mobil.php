@@ -7,10 +7,6 @@ class Mobil extends Model
 {
     protected $primaryKey = 'mobil_id'; // tambahkan ini
 
-    public $incrementing = true; // opsional, true = auto-increment
-
-    protected $keyType = 'int';  // karena kamu pakai bigIncrements
-
     protected $fillable = [
         'nama',
         'merk',
