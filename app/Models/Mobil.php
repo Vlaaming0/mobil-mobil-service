@@ -9,8 +9,7 @@ class Mobil extends Model
         'nama',
         'merk',
         'deskripsi',
-        'harga',
-        'stok',
+        'amount',
         'gambar'
     ];
 

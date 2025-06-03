@@ -10,8 +10,8 @@ class AddDeskripsiDanGambarToMobilsTable extends Migration
         Schema::table('mobils', function (Blueprint $table) {
             // Tambahkan kolom deskripsi (nullable) setelah kolom merk
             $table->text('deskripsi')->nullable()->after('merk');
-            // Tambahkan kolom gambar (nullable) setelah kolom stok
-            $table->string('gambar')->nullable()->after('stok');
+            // Tambahkan kolom gambar (nullable) setelah kolom amount
+            $table->string('gambar')->nullable()->after('amount');
         });
     }
 

@@ -8,7 +8,7 @@ class CreateMobilsTable extends Migration
     public function up()
     {
         Schema::create('mobils', function (Blueprint $table) {
-            $table->mobil_id();
+            $table->id();
             $table->string('nama');
             $table->string('merk');
             $table->unsignedBigInteger('amount');

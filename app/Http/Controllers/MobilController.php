@@ -29,13 +29,12 @@ class MobilController extends Controller
         $this->validate($request, [
             'nama'      => 'required|string',
             'merk'      => 'required|string',
-            'harga'     => 'required|numeric|min:0',
-            'stok'      => 'sometimes|required|integer|min:0',
+            'amount'     => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
             'gambar'    => 'nullable|image|max:2048',
         ]);
 
-        $data = $request->only(['nama', 'merk', 'harga', 'stok', 'deskripsi']);
+        $data = $request->only(['nama', 'merk', 'amount', 'deskripsi']);
 
         if ($request->hasFile('gambar')) {
             $file     = $request->file('gambar');
@@ -63,13 +62,12 @@ class MobilController extends Controller
         $this->validate($request, [
             'nama'      => 'sometimes|required|string',
             'merk'      => 'sometimes|required|string',
-            'harga'     => 'sometimes|required|numeric|min:0',
-            'stok'      => 'sometimes|required|integer|min:0',
+            'amount'     => 'sometimes|required|numeric|min:0',
             'deskripsi' => 'nullable|string',
             'gambar'    => 'nullable|image|max:2048',
         ]);
 
-        $data = $request->only(['nama', 'merk', 'harga', 'stok', 'deskripsi']);
+        $data = $request->only(['nama', 'merk', 'amount', 'deskripsi']);
 
         if ($request->hasFile('gambar')) {
             // Hapus file lama jika ada
