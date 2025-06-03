@@ -31,7 +31,7 @@ class MobilController extends Controller
             'merk'      => 'required|string',
             'amount'     => 'required|numeric|min:0',
             'deskripsi' => 'nullable|string',
-            'gambar'    => 'nullable|image|max:2048',
+            'gambar'    => 'nullable|image|max:5120',
         ]);
 
         $data = $request->only(['nama', 'merk', 'amount', 'deskripsi']);
@@ -64,7 +64,7 @@ class MobilController extends Controller
             'merk'      => 'sometimes|required|string',
             'amount'     => 'sometimes|required|numeric|min:0',
             'deskripsi' => 'nullable|string',
-            'gambar'    => 'nullable|image|max:2048',
+            'gambar'    => 'nullable|image|max:5120',
         ]);
 
         $data = $request->only(['nama', 'merk', 'amount', 'deskripsi']);
